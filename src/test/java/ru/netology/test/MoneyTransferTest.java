@@ -79,7 +79,7 @@ class MoneyTransferTest {
 
         int sumForTransfer = 12000;
         dashboard.moneyTransfer(DataHelper.getCard1(authInfo))
-                .makeNotSuccessTransfer(DataHelper.getCard2(authInfo), sumForTransfer);
+                .makeNotSuccessTransfer(DataHelper.getCard2(authInfo), sumForTransfer, "Ошибка! Произошла ошибка");
     }
 
     @Test
@@ -88,7 +88,7 @@ class MoneyTransferTest {
 
         int sumForTransfer = 3000;
         new DashboardPage().moneyTransfer(DataHelper.getCard2(authInfo))
-                .makeNotSuccessTransfer(DataHelper.getInvalidCard(authInfo), sumForTransfer);
+                .makeNotSuccessTransfer(DataHelper.getInvalidCard(authInfo), sumForTransfer, "Ошибка! Произошла ошибка");
     }
 }
 
